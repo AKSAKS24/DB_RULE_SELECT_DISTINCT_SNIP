@@ -1,0 +1,9 @@
+{
+    "pgm_name": "ZTEST_RULE727_COMBINED",
+    "inc_name": "ZTEST_RULE727_COMBINED_INC",
+    "type": "PROG",
+    "name": "MAIN_BLOCK",
+    "start_line": 5,
+    "end_line": 300,
+    "code": "DATA lt_data TYPE TABLE OF mara.\nSELECT * FROM mara INTO TABLE lt_data.\nDELETE ADJACENT DUPLICATES FROM lt_data COMPARING matnr.\nDATA lt_data_ok TYPE TABLE OF mara.\nSELECT matnr FROM mara INTO TABLE lt_data_ok.\nWRITE: / 'Done'."
+}
